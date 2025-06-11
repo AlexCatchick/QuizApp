@@ -1,0 +1,108 @@
+/* style.css */
+
+:root {
+  --primary-color: #0093af;
+  --secondary-color: #edcdc2;
+  --text-color: #333;
+  --success-color: #4caf50;
+  --error-color: #f44336;
+  --bg-light: #f9f9f9;
+  --border-radius: 8px;
+  --transition-speed: 0.3s;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: var(--secondary-color);
+  color: var(--text-color);
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+}
+
+main {
+  background: white;
+  padding: 5rem;
+  border-radius: var(--border-radius);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  max-width: 500px;
+  width: 100%;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: var(--primary-color);
+}
+
+button {
+  padding: 0.75rem 1.5rem;
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  transition: background-color var(--transition-speed);
+  font-size: 1rem;
+}
+
+button:hover {
+  background-color: #00758b;
+}
+
+.hidden {
+  display: none;
+}
+
+.startPage,
+.questionnairePage,
+.resultPage {
+  text-align: center;
+}
+
+.questionDisplay {
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.choice {
+  display: block;
+  margin: 0.5rem 0;
+  padding: 0.75rem;
+  background-color: var(--bg-light);
+  border: 2px solid var(--primary-color);
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  transition: background-color var(--transition-speed),
+    color var(--transition-speed);
+}
+
+.choice:hover {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.choice.correct {
+  background-color: var(--success-color);
+  color: white;
+  border-color: var(--success-color);
+}
+
+.choice.wrong {
+  background-color: var(--error-color);
+  color: white;
+  border-color: var(--error-color);
+}
+
+.questionsRemaining {
+  margin-top: 1rem;
+  font-size: 1rem;
+  color: #555;
+}
